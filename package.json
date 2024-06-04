@@ -23,13 +23,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "vite": "^5.2.0"
-<<<<<<< HEAD
   },
   "description": "🎥 INSERT LOOM PRESENTATION LINK: [Here]",
   "main": "vite.config.js",
   "author": "",
   "license": "ISC"
-=======
-  }
->>>>>>> 390c34dac8fd2eb67619ee3f14e2225ef9f6b07d
 }
