@@ -7,10 +7,20 @@ import {BrowserRouter,Routes,route } from "react-router-dom"
   
 function App() {
   return (
-    <h1>Hello world!</h1>
+    <BrowserRouter>
+    <Routes>
+        <Route path="/" element={<App />} />
+        <Route path="/" element={<about />} />
+    </Routes>
+  </BrowserRouter>
   )
 }
 
+function Home() {
+  return (
+    <h1>Hello, React Router!</h1>
+  )
+}
 
 function About() {
   return (
@@ -20,11 +30,6 @@ function About() {
 
 
 
-  ReactDOM.createRoot(document.getElementById('root')).render(
-    <BrowserRouter>
-      <Routes>
-          <Route path="/" element={<App />} />
-          <Route path="/" element={<about />} />
-      </Routes>
-    </BrowserRouter>
-  );
+ReactDOM
+.createRoot(document.getElementById('root'))
+.render(<App />);
