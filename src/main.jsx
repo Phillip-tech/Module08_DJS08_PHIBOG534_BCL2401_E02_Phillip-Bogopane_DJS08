@@ -2,12 +2,16 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import {BrowserRouter,Routes,route } from "react-router-dom"
+import {BrowserRouter,Routes,route,Link } from "react-router-dom"
 
   
 function App() {
   return (
     <BrowserRouter>
+    <nav>
+    <Link to="/">Home</Link>
+    <Link to="/about">About</Link>
+    </nav>
     <Routes>
         <Route path="/" element={<App />} />
         <Route path="/" element={<about />} />
