@@ -19,9 +19,13 @@ export default function App() {
       <Routes>
             <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
-            <Route path="vans" element={<Vans />} />
-            <Route path="/vans/:id" element={<VanDetail />} />
+            <Route path="about" element={<About />} />
 
+            <Route path="vans">
+              <Route index element={<Vans />} />
+              <Route path=":id" element={<VanDetail />} />
+            </Route>
+            
             <Route path="host" element={<HostLayout />}>
             <Route index element={<Dashboard />} />
             <Route path="income" element={<Income />} />
