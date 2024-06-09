@@ -17,11 +17,22 @@ import HostVanPhotos from "./pages/Host/HostVanPhotos"
 import NotFound from "./pages/NotFound"
 import Layout from "./components/Layout"
 import HostLayout from "./components/HostLayout"
-import AuthRequired from "./components/AuthRequired"
-
+import { Navigate } from 'react-router-dom';
 import "./server"
 
-function App() {
+export default function App() {
+  
+
+  function AuthRequired() {
+    // Assuming authenticated is a state variable or prop
+    const authenticated = false;
+  
+    if (!authenticated) {
+      return <Navigate to="/login" />;
+    }
+  
+    return <Outlet />;
+  }
 
   return (
     <BrowserRouter>
@@ -57,6 +68,3 @@ function App() {
   )
 }
 
-ReactDOM
-  .createRoot(document.getElementById('root'))
-  .render(<App />);
