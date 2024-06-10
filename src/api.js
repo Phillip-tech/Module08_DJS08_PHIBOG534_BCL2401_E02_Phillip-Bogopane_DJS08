@@ -7,7 +7,7 @@ import {
     getDoc,
     query,
     where,
-    documentId
+    documentId,
 } from "firebase/firestore/lite"
 
 const firebaseConfig = {
@@ -83,7 +83,7 @@ It also shows how you can chain together multiple `where` filter calls
 //     return vans[0]
 // }
 
-/*export async function getHostVan(id) {
+export async function getHostVan(id) {
     const q = query(
       vansCollectionRef,
       where(firebase.firestore.FieldPath.documentId(), "==", id),
@@ -95,7 +95,7 @@ It also shows how you can chain together multiple `where` filter calls
       id: doc.id
     }));
     return vans[0];
-  }*/
+  }
 
 export async function loginUser(creds) {
     const res = await fetch("/api/login",
